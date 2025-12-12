@@ -2,7 +2,7 @@ import SectionTitle from "../../components/SectionTitle";
 
 export default function About() {
   return (
-    <section id="about" className="py-2">
+    <section id="about" className="py-15">
       <SectionTitle title="Sobre mí"
       content="Bachiller en Física con experiencia en análisis y gestión de datos, 
         decidí orientar mi carrera hacia el desarrollo web porque disfruto 

@@ -31,7 +31,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-5">
+    <section id="contact" className="py-10">
       <SectionTitle title="Contacto" content="" />
 
       <div className="flex flex-wrap justify-center gap-6 mt-10">

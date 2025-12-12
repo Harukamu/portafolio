@@ -24,7 +24,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-10">
+    <section id="projects" className="py-15">
       <SectionTitle title="Proyectos" content=""/>
 
       <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-10 mt-12">
