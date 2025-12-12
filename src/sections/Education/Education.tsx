@@ -2,7 +2,7 @@ import SectionTitle from "../../components/SectionTitle";
 
 export default function Education(){
     return(
-        <section id="education" className="py-15">
+        <section id="education" className="py-20">
         <SectionTitle title="Educación" content="" />
             <div className="max-w-4xl mx-auto mt-10 space-y-10">
                 {/* Codeable */}

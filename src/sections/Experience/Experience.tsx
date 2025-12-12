@@ -2,7 +2,7 @@ import SectionTitle from "../../components/SectionTitle";
 // clasificar el texto y color para el componente repetitivo.
 export default function Experience(){
     return(
-        <section id="experience" className="py-15">
+        <section id="experience" className="py-20">
         <SectionTitle title="Experiencia" content="" />
             <div className="max-w-4xl mx-auto mt-10 space-y-12">
 

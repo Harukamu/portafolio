@@ -19,7 +19,7 @@ export default function TechStack() {
   ];
 
   return (
-    <section id="tech" className="py-15">
+    <section id="tech" className="py-20">
       <SectionTitle title="Tecnologías" content=""/>
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-10">
