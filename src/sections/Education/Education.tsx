@@ -1,41 +1,34 @@
 import SectionTitle from "../../components/SectionTitle";
+import { useLanguage } from "../../Hooks/useLanguage";
 
 export default function Education(){
+    const {t} = useLanguage();
     return(
         <section id="education" className="py-20">
-        <SectionTitle title="Educación" content="" />
+        <SectionTitle title={t.education.title} content="" />
             <div className="max-w-4xl mx-auto mt-10 space-y-10">
-                {/* Codeable */}
-                <div className="bg-slate-200 shadow-md rounded-xl p-4">
-                <h3 className="text-xl font-semibold">Codeable</h3>
-                <h3 className="text-base text-gray-600">Desarrollo FullStack</h3>
-                <p className="text-sm text-gray-500 mb-4">En curso</p>
-                <p className="list-disc list-inside space-y-2 text-gray-900">
-                    Especialización de una ruta más amplia para el desarrollo FullStack.
-                </p>
-                </div>
+                {t.education.items.map((item, index) => (
+                <div
+                    key={index}
+                    className="bg-slate-200 shadow-md rounded-xl p-4"
+                >
+                    <h3 className="text-xl font-semibold">
+                    {item.institution}
+                    </h3>
 
-                {/* Codigo */}
-                <div className="bg-slate-200 shadow-md rounded-xl p-4">
-                <h3 className="text-xl font-semibold">Codigo-Tecsup</h3>
-                <h3 className="text-base text-gray-600">Desarrollo web FullStack con Python</h3>
-                <p className="text-sm text-gray-500 mb-4">Ene. 2025 – Ago. 2025</p>
+                    <h4 className="text-base text-gray-600">
+                    {item.program}
+                    </h4>
 
-                <p className="list-disc list-inside space-y-2 text-gray-900">
-                    Capacitada para desarrollar aplicaciones desde el Front-end con React y Back-end con Python.
-                </p>
-                </div>
+                    <p className="text-sm text-gray-500 mb-4">
+                    {item.period}
+                    </p>
 
-                {/* Profesión */}
-                <div className="bg-slate-200 shadow-md rounded-xl p-4">
-                <h3 className="text-xl font-semibold">Universidad Nacional del Callao</h3>
-                <h3 className="text-base text-gray-600">Física</h3>
-                <p className="text-sm text-gray-500 mb-4">Ago. 2016 – Dic. 2022</p>
-                <p className="list-disc list-inside space-y-2 text-gray-900">
-                    Durante mi formación académica desarrollé habilidades sólidas en Matemáticas, 
-                    Física, Estadística y Computación.
-                </p>
+                    <p className="text-gray-900 leading-relaxed">
+                    {item.description}
+                    </p>
                 </div>
+                ))}
             </div>
         </section>
     )

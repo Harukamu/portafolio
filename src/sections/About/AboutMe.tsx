@@ -1,15 +1,17 @@
 import SectionTitle from "../../components/SectionTitle";
+import { useLanguage } from "../../Hooks/useLanguage";
 
 export default function About() {
+  const {t} = useLanguage();
+
   return (
     <section id="about" className="py-20">
-      <SectionTitle title="Sobre mí"
-      content="Bachiller en Física con experiencia en análisis y gestión de datos, 
-        decidí orientar mi carrera hacia el desarrollo web porque disfruto 
-        crear soluciones prácticas que ayuden a las personas y a los negocios.
-        Me motiva participar en proyectos desafiantes que me permitan seguir aprendiendo 
-        y aportar valor con soluciones eficientes, limpias y bien estructuradas."
-      />
+      <div className="max-w-7xl mx-auto px-4 text-justify">
+        <SectionTitle
+          title={t.about.title}
+          content={t.about.content}
+        />
+      </div>
     </section>
   );
 }

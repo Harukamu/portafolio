@@ -1,8 +1,10 @@
 import SectionTitle from "../../components/SectionTitle";
 import ButtonContact from "../../components/Button";
 import {Linkedin, MessageCircle, Mail, Github} from "lucide-react";
+import { useLanguage } from "../../Hooks/useLanguage";
 
 export default function Contact() {
+  const {t} = useLanguage();
   const contacts = [
     {
       name: "GitHub",
@@ -32,7 +34,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-10">
-      <SectionTitle title="Contacto" content="" />
+      <SectionTitle title={t.contact.title} content="" />
 
       <div className="flex flex-wrap justify-center gap-6 mt-10">
         {contacts.map((item) => (

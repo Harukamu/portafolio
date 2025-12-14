@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../Hooks/useLanguage";
 
 export default function Hero() {
+  const{t}=useLanguage();
   return (
     <section id="hero" 
     className="
@@ -25,12 +27,10 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h1 className="text-5xl font-bold mb-4">
-          ¡Hola! Soy <span className="text-blue-700">[Katia Mamani Burgos]</span>
+        <h1 className="text-5xl font-bold mb-4">{t.hero.title}
+          {""} <span className="text-blue-700">[Katia Mamani Burgos]</span>
         </h1>
-        <p className="text-2xl text-gray-700">
-          Desarrollador Web — React | TypeScript | Tailwind
-        </p>
+        <p className="text-2xl text-gray-700">{t.hero.role}</p>
       </motion.div>
     </section>
   );

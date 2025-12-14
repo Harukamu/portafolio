@@ -1,7 +1,9 @@
 import SectionTitle from "../../components/SectionTitle";
 import {SiPython, SiTailwindcss, SiPostgresql, SiReact, SiDjango, SiFigma, SiVite, SiAppwrite, SiJavascript, SiTypescript, SiGithub, SiHtml5, SiCss3} from "react-icons/si";
+import { useLanguage } from "../../Hooks/useLanguage";
 
 export default function TechStack() {
+  const {t} = useLanguage();
   const tech = [
     { name: "JavaScript", icon: <SiJavascript size={32} className="text-yellow-500"/> },
     { name: "TypeScript", icon: <SiTypescript size={32} className="text-blue-500"/> },
@@ -20,7 +22,7 @@ export default function TechStack() {
 
   return (
     <section id="tech" className="py-20">
-      <SectionTitle title="Tecnologías" content=""/>
+      <SectionTitle title={t.tech.title} content=""/>
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-10">
           {tech.map((item) => (
